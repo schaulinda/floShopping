@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" ng-app="shoppingApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Votre site pour faire votre shopping à prix abordable pour tout le monde">
+  <meta name="keywords" content="chaussure, talon, ballerine, shopping, florinde, vendre, acheter, fer, deodorant, parfum, friser, cheveux, sac, clé, ordinateur, lait" />
+  <meta name="author" content="hgd" >
+  <link rel="icon" href="favicon.png">
+  <title>Faites votre bonheur avec Florinde Shopping</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/jquery/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+
+</head>
+<body>
+  <div id="fb-root"></div>
+<!-- <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
+  
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-12 col-lg-12">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="logo.png" style="height:50px;" /><span style="color:#db5566">Florinde</span> <span style="color:#0bacd3">Shopping</span></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Conditions de vente</a></li>
+            <li><a href="#">Nous contacter</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div></div>
+    
+      <div class="col-md-12 col-lg-12 condition">
+        <div class="blue text-center">
+          <p>Condition de vente d&egrave;s Novembre 2014</p>                    
+        </div>
+        <img src="emb.jpg" alt="Florinde Shopping" class="hidden-xs hidden-sm emb"> 
+      </div>
+     
+      <div class="col-md-12 col-lg-12 menu">
+        <div class="well text-center">
+            <input class="form-control" placeholder="Search" ng-model="value">
+            <a href="" ng-click="value= ''" class="btn btn-hot text-capitalize btn-sm">Tout</a>
+            <a href="" ng-click="value= 'autres'" class="btn btn-sunny text-capitalize btn-sm">Autres</a>
+            <a href="" ng-click="value= 'chaussure'" class="btn btn-marroon text-capitalize btn-sm">Chaussures</a>
+            <a href="" ng-click="value= 'coiffure'" class="btn btn-sky text-capitalize btn-sm">Coiffure</a>
+            <a href="" ng-click="value= 'cosmetique'" class="btn btn-violet text-capitalize btn-sm">Cosmetique</a> 
+            <a href="" ng-click="value= 'sacs'" class="btn btn-fresh text-capitalize btn-sm">Sacs</a>
+            <a href="" ng-click="value= 'technique'" class="btn btn-rose text-capitalize btn-sm">Techniques</a>
+         </div>
+         
+          <ul style="visibility:hidden; display:none">
+             <li ng-repeat="gamme in gammes | filter:gamme" style="list-style:none;">
+                <a id="link-1" href="" ng-click="value= 'cosmetique'">{{gamme.nom}}</a>             
+             </li>          
+          </ul> 
+       </div>
+       
+       <div class="col-md-2 col-md-offset-10 col-lg-2 col-lg-offset-10 social">
+         <div class="row">
+            <div class="col-md-4 col-lg-4">
+              <div class="fb-like" data-href="http://localhost:8000/app/#/products" data-width="400" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>            
+            </div>         
+         </div>
+      </div>     
+       
+       <div ng-view></div>
+        
+    </div>
+  </div>
+</body>
+</html>

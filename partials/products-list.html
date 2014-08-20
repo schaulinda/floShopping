@@ -1,0 +1,10 @@
+
+     
+      <div class="col-md-3 col-lg-3 products" ng-repeat="product in products | filter:value | orderBy:orderProp" class="thumbnail">
+        <a ng-href="#/products/{{product.gamme}}/{{product.id}}" class="thumb"> <img ng-src="{{product.imageUrl}}" class="img-responsive img-circle"></a>
+        <h1><a ng-href="#/products/{{product.gamme}}/{{product.id}}">{{product.name}}</a></h1>
+        <p>{{product.prix}} Francs CFA</p>
+      </div>
+
+
+ 

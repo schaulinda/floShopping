@@ -1,0 +1,31 @@
+[
+    { 
+        "id": 1, 
+        "nom":"Cosmetique"
+    }, 
+    
+    { 
+        "id": 2, 
+        "nom":"Coiffure"
+    },
+    
+    { 
+        "id": 3, 
+        "nom":"Technique"
+    },
+    
+    { 
+        "id": 4, 
+        "nom":"Chaussures"
+    },
+    
+    { 
+        "id": 5, 
+        "nom":"Sacs"
+    },
+    
+    { 
+        "id": 6, 
+        "nom":"Autres"
+    }
+]

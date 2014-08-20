@@ -1,0 +1,17 @@
+
+      <div class="col-md-12 col-lg-12 social">
+         <div class="row">
+            <div class="col-md-4 col-lg-4">
+              <div class="fb-like" data-href="http://localhost:8000/app/#/products" data-width="400" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>            
+            </div>         
+         </div>
+      </div>
+      
+      <div class="col-md-3 col-lg-3 products" ng-repeat="product in products | filter:value | orderBy:orderProp" class="thumbnail">
+        <a ng-href="#/products/{{product.gamme}}/{{product.id}}" class="thumb"> <img ng-src="{{product.imageUrl}}" class="img-responsive img-circle"></a>
+        <h1><a ng-href="#/products/{{product.gamme}}/{{product.id}}">{{product.name}}</a></h1>
+        <p>{{product.prix}} Francs CFA</p>
+      </div>
+
+
+ 

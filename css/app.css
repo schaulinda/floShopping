@@ -45,6 +45,11 @@ body {
         padding: 10px 15px;
     }
 }
+
+.md-trigger{
+  cursor: pointer;
+}
+
 .blue{
   in-height: 20px;
   padding: 19px;

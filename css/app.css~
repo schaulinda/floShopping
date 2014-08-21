@@ -45,6 +45,11 @@ body {
         padding: 10px 15px;
     }
 }
+
+.md-trigger{
+  
+}
+
 .blue{
   in-height: 20px;
   padding: 19px;
@@ -78,11 +83,6 @@ body {
 }
 }
 
-@media (max-width:241px) {
-.blue{
-  margin-top: 100px;
-}
-}
 .menu .btn{
     margin: 4px;
     box-shadow: 1px 1px 5px #888888;
